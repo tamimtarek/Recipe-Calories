@@ -1,0 +1,56 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Grilled Salmon with Asparagus",
+      "short_description": "A healthy and flavorful dish perfect for dinner.",
+      "ingredients": ["4 salmon fillets", "1 bunch asparagus", "2 tablespoons olive oil", "Salt and pepper to taste"],
+      "preparing_time": 20,
+      "calories": 300,
+      "recipe_image": "https://i.ibb.co/c1Qfrfb/grilled-steak-salmon-healthy-gourmet-meal-generated-by-ai.jpg"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Vegetable Stir-Fry",
+      "short_description": "A quick and easy vegetarian meal.",
+      "ingredients": ["2 cups mixed vegetables (bell peppers, broccoli, carrots)", "200g tofu", "3 tablespoons soy sauce", "2 cloves garlic (minced)", "1 tablespoon ginger (minced)"],
+      "preparing_time": 25,
+      "calories": 250,
+      "recipe_image": "https://i.ibb.co/P9fK13B/fresh-gourmet-meal-grilled-beef-salad-generated-by-ai.jpg"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Spaghetti Carbonara",
+      "short_description": "Classic Italian pasta dish with creamy sauce.",
+      "ingredients": ["300g spaghetti", "150g pancetta or bacon", "3 eggs", "50g grated Parmesan cheese", "2 cloves garlic (minced)", "Salt and pepper to taste"],
+      "preparing_time": 30,
+      "calories": 400,
+      "recipe_image": "https://i.ibb.co/X7Zm5NM/fresh-linguini-with-prawns-parmesan-cheese-generated-by-ai.jpg"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Chicken Caesar Salad",
+      "short_description": "A light and refreshing salad with grilled chicken.",
+      "ingredients": ["2 chicken breasts", "1 head romaine lettuce", "1/2 cup Caesar dressing", "1/4 cup grated Parmesan cheese", "1 cup croutons"],
+      "preparing_time": 15,
+      "calories": 320,
+      "recipe_image": "https://i.ibb.co/GMsLMtP/side-view-caesar-salad-with-chicken-parmesan-cheese-white-bowl-wooden-board.jpg"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Beef Tacos",
+      "short_description": "Delicious and customizable tacos for any occasion.",
+      "ingredients": ["500g ground beef", "1 packet taco seasoning", "8 taco shells", "1 cup shredded lettuce", "1 cup diced tomatoes", "1/2 cup shredded cheddar cheese", "Sour cream and salsa for topping"],
+      "preparing_time": 25,
+      "calories": 350,
+      "recipe_image": "https://i.ibb.co/zm0YRML/mexican-tacos-with-beef-tomato-sauce-salsa.jpg"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Mushroom Risotto",
+      "short_description": "Creamy and flavorful Italian rice dish.",
+      "ingredients": ["1 cup Arborio rice", "200g mushrooms (sliced)", "4 cups chicken or vegetable broth", "1/2 cup white wine", "1 onion (chopped)", "2 cloves garlic (minced)", "1/4 cup grated Parmesan cheese", "2 tablespoons butter"],
+      "preparing_time": 35,
+      "calories": 380,
+      "recipe_image": "https://i.ibb.co/L03CbWs/pasta-with-meatballs-mushrooms-creamy-sauce.jpg"
+    }
+  ]
