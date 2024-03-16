@@ -1,9 +1,8 @@
 
 import PropTypes from 'prop-types';
 
-const SideBar = ({ showCooks }) => {
-
-    console.log(showCooks)
+const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
+    console.log(currentCook)
 
     return (
         <div className='border w-[100%] text-center flex flex-col pt-5 rounded-xl space-y-4'>
@@ -26,12 +25,12 @@ const SideBar = ({ showCooks }) => {
                             {
                                 showCooks.map((item, idx) => (
                                     <tr key={idx} className="bg-base-300">
-                                        <th>{idx+1}</th>
+                                        <th>{idx + 1}</th>
                                         <td>{item.recipe_name}</td>
                                         <td>{item.preparing_time}<br></br> minutes</td>
                                         <td>{item.calories}<br></br> calories</td>
                                         <div>
-                                            <button className="btn text-xs btn-success text-[#150B2B] mt-3 rounded-3xl hidden lg:block">Preparing</button>
+                                            <button onClick={() => handlePreparing(item)} className="btn text-xs btn-success text-[#150B2B] mt-3 rounded-3xl hidden lg:block">Preparing</button>
                                         </div>
                                     </tr>
                                 ))
@@ -42,7 +41,7 @@ const SideBar = ({ showCooks }) => {
                 </div>
             </div>
             <div>
-                <h3 className='text-2xl font-semibold text-[#282828]'>Currently cooking: 02</h3>
+                <h3 className='text-2xl font-semibold text-[#282828]'>Currently cooking:{currentCook.length}</h3>
                 <div className="divider"></div>
                 <div>
                     <div className="overflow-x-auto">
@@ -58,26 +57,17 @@ const SideBar = ({ showCooks }) => {
                             </thead>
                             <tbody>
                                 {/* row 1 */}
-                                <tr>
-                                    <th>1</th>
-                                    <td>Cy Ganderton</td>
-                                    <td>Quality Control Specialist</td>
-                                    <td>Blue</td>
-                                </tr>
-                                {/* row 2 */}
-                                <tr>
-                                    <th>2</th>
-                                    <td>Hart Hagerty</td>
-                                    <td>Desktop Support Technician</td>
-                                    <td>Purple</td>
-                                </tr>
-                                {/* row 3 */}
-                                <tr>
-                                    <th>3</th>
-                                    <td>Brice Swyre</td>
-                                    <td>Tax Accountant</td>
-                                    <td>Red</td>
-                                </tr>
+                                {
+                                    currentCook.map((current, idx) => (
+                                        <tr key={idx}>
+                                            <th>{idx+1}</th>
+                                            <td>{current.recipe_name}</td>
+                                            <td>{current.preparing_time}</td>
+                                            <td>{current.calories}</td>
+                                        </tr>
+                                    ))
+                                }
+
                             </tbody>
                         </table>
                     </div>

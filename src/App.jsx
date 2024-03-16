@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const [showCooks, setShowCooks] = useState([]);
+  const [currentCook, setCurrentCook] = useState([])
   const handleCooking = (cooks) => {
     const isExist = showCooks.find(item => item.id ==cooks.id);
     if(!isExist){
@@ -16,6 +17,14 @@ function App() {
     else{
       toast.warn("Already Exsist!")
     }
+  }
+
+  const handlePreparing =(id) =>{
+    const remainigitem = showCooks.filter(item => item.id !==id.id);
+    setShowCooks(remainigitem)
+    const currentCooks = [...currentCook, id];
+    setCurrentCook(currentCooks)
+
   }
   
   return (
@@ -39,7 +48,7 @@ function App() {
             <Recipes handleCooking={handleCooking}></Recipes>
           </div>
           <div className="lg:col-span-3">
-          <SideBar showCooks={showCooks}></SideBar>
+          <SideBar currentCook={currentCook} handlePreparing={handlePreparing} showCooks={showCooks}></SideBar>
           </div>
           </div>
       </div>
