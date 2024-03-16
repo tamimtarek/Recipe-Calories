@@ -24,7 +24,7 @@ const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
                             {/* row 1 */}
                             {
                                 showCooks.map((item, idx) => (
-                                    <tr key={idx} className="bg-base-300 text-xs lg:text-base">
+                                    <tr key={idx} className="bg-base-300 text-xs">
                                         <th>{idx + 1}</th>
                                         <td className='hidden lg:block'>{item.recipe_name}</td>
                                         <td className='block lg:hidden'>{item.recipe_name.slice(0,5)}</td>
