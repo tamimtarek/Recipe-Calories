@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const [showCooks, setShowCooks] = useState([]);
-  const [currentCook, setCurrentCook] = useState([])
+  const [currentCook, setCurrentCook] = useState([]);
   const handleCooking = (cooks) => {
     const isExist = showCooks.find(item => item.id ==cooks.id);
     if(!isExist){
@@ -40,7 +40,7 @@ function App() {
       <div>
         <div className="m-auto text-center mt-11 space-y-7">
           <h3 className="text-[#150B2B] text-5xl font-semibold">Our Recipes</h3>
-          <p className="text-[#150B2B99]">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget <br /> urna volutpat curabitur elementum mauris aenean neque. </p>
+          <p className="text-[#150B2B99]">Delve into Our Recipes for culinary inspiration. From mouthwatering mains to delectable desserts, <br /> discover the perfect dish for every occasion. </p>
         </div>
         {/* Recipe Section */}
         <div className="grid grid-cols-1 lg:grid-cols-9 mt-10 gap-7">

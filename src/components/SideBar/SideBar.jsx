@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
-    console.log(currentCook)
+    
 
     return (
         <div className='border w-[100%] text-center flex flex-col pt-5 rounded-xl space-y-4'>
@@ -62,8 +62,8 @@ const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
                                         <tr key={idx}>
                                             <th>{idx+1}</th>
                                             <td>{current.recipe_name}</td>
-                                            <td>{current.preparing_time}</td>
-                                            <td>{current.calories}</td>
+                                            <td>{current.preparing_time}<br></br> minutes</td>
+                                            <td>{current.calories}<br></br> calories</td>
                                         </tr>
                                     ))
                                 }
@@ -75,11 +75,11 @@ const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
                 <div className='flex justify-end items-center gap-4 m-2'>
                     <div className='text-left'>
                         <h3>Total Time =</h3>
-                        <h3>45 minutes</h3>
+                        <h3>{currentCook.reduce((p, c)=> p + c.preparing_time, 0)} minutes</h3>
                     </div>
                     <div className='text-left'>
                         <h3>Total Calories =</h3>
-                        <h3>1050 calories</h3>
+                        <h3>{currentCook.reduce((p, c)=> p + c.calories, 0)} calories</h3>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,9 @@ const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
 };
 
 SideBar.propTypes = {
-    showCooks: PropTypes.array
+    showCooks: PropTypes.array,
+    handlePreparing: PropTypes.func,
+    currentCook: PropTypes.array
 };
 
 export default SideBar;

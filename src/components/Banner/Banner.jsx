@@ -9,8 +9,7 @@ const Banner = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="">
                         <h1 className="mb-5 text-3xl lg:text-5xl font-bold">Discover an exceptional cooking<br /> class tailored for you!</h1>
-                        <p className="mb-5">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding
-                        <br /> problems to become an exceptionally well world-class Programmer.</p>
+                        <p className="mb-5">Indulge in Culinary Delights. Whip Up Gourmet Creations. Unlock Flavorful Recipes. Master the Art <br /> of Cooking. Savor Exquisite Dishes. Discover Epicurean Adventures.</p>
                         <div>
                         <button class="btn bg-[#0BE58A] rounded-full text-lg font-semibold m-4 border-none">Explore Now</button>
                         <button class="btn btn-outline hover:bg-transparent  text-white font-normal rounded-full text-lg">Our Feedback</button>
