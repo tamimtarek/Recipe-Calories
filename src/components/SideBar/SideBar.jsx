@@ -24,13 +24,14 @@ const SideBar = ({ showCooks, handlePreparing, currentCook }) => {
                             {/* row 1 */}
                             {
                                 showCooks.map((item, idx) => (
-                                    <tr key={idx} className="bg-base-300">
+                                    <tr key={idx} className="bg-base-300 text-xs lg:text-base">
                                         <th>{idx + 1}</th>
-                                        <td>{item.recipe_name}</td>
+                                        <td className='hidden lg:block'>{item.recipe_name}</td>
+                                        <td className='block lg:hidden'>{item.recipe_name.slice(0,5)}</td>
                                         <td>{item.preparing_time}<br></br> minutes</td>
                                         <td>{item.calories}<br></br> calories</td>
                                         <div>
-                                            <button onClick={() => handlePreparing(item)} className="btn text-xs btn-success text-[#150B2B] mt-3 rounded-3xl hidden lg:block">Preparing</button>
+                                            <button onClick={() => handlePreparing(item)} className="btn text-xs btn-success text-[#150B2B] mt-3 rounded-3xl">Preparing</button>
                                         </div>
                                     </tr>
                                 ))
