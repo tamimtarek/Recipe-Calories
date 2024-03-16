@@ -13,7 +13,7 @@ function App() {
   }
   
   return (
-    <div className="w-[1280px] m-auto">
+    <div className="lg:w-[1280px] m-auto">
       {/* Nav section */}
       <div className="mt-3">
       <NavBar></NavBar>
@@ -33,7 +33,7 @@ function App() {
             <Recipes handleCooking={handleCooking}></Recipes>
           </div>
           <div className="lg:col-span-3">
-            <SideBar showCooks={showCooks} ></SideBar>
+          <SideBar showCooks={showCooks} ></SideBar>
           </div>
           </div>
       </div>
