@@ -3,13 +3,19 @@ import Banner from "./components/Banner/Banner"
 import NavBar from "./components/NavBar/NavBar"
 import Recipes from "./components/Recipes/Recipes"
 import SideBar from "./components/SideBar/SideBar"
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const [showCooks, setShowCooks] = useState([]);
   const handleCooking = (cooks) => {
-    
-    console.log(cooks)
+    const isExist = showCooks.find(item => item.id ==cooks.id);
+    if(!isExist){
+       setShowCooks([...showCooks, cooks])
+    }
+    else{
+      toast.warn("Already Exsist!")
+    }
   }
   
   return (
@@ -33,10 +39,11 @@ function App() {
             <Recipes handleCooking={handleCooking}></Recipes>
           </div>
           <div className="lg:col-span-3">
-          <SideBar showCooks={showCooks} ></SideBar>
+          <SideBar showCooks={showCooks}></SideBar>
           </div>
           </div>
       </div>
+      <ToastContainer />
     </div>
   )
 }
